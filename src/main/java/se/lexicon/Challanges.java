@@ -41,12 +41,17 @@ public class Challanges {
         personInfo.put("Daniel@test.com", "Daniel Petersson");
         personInfo.put("Johan@test.com", "Johan Karlsson");
 
-        Set<String> emailSet = new HashSet<>();
+        /*Set<String> emailSet = new HashSet<>();
 
         for (String email : personInfo.keySet()) {
             emailSet.add(email);
         }
         System.out.println(emailSet);
+
+         */
+
+        Set<String> keySet = new HashSet<>(personInfo.keySet());
+        System.out.println("The keys are: " + keySet);
     }
 
     //3. Create a new class and call it SuperHero. Add fields for Id,Name and Age + getters and
