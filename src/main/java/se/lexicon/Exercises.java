@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Hello world!
  */
-public class App {
+public class Exercises {
     public static void main(String[] args) {
         ex1();
         ex2();
@@ -166,7 +166,7 @@ public class App {
         cars.put(2, "BMW");
         cars.put(3, "VW");
         cars.put(4, "Skoda");
-        System.out.println(cars);
+        System.out.println("HashMap of: " +cars);
     }
 
     //10. Create a new hashMap of type <Integer,String> and populate it with elements containing an
@@ -201,25 +201,18 @@ public class App {
     //Create a new hashMap of type <Integer,Car> and populate it with elements containing an
     //id(Integer) and a car object(Car). Lastly, print out only the car's brand.
     public static void ex12() {
+        Car car1 = new Car(1,"Volvo","240");
+        Car car2 = new Car(2,"Ferrari","Testarosa");
+        Car car3 = new Car(3,"VW","Passat");
+        Car car4 = new Car(4,"Audi","80");
 
+        HashMap<Integer, Object> cars = new HashMap<>();
+        cars.put(1,car1);
+        cars.put(2,car2);
+        cars.put(3,car3);
+        cars.put(4,car4);
+
+        System.out.println(cars.toString());
     }
-
-    //Challenges
-    //1. Create an empty set and populate it with the all the days of the week. Next create a second
-    //set and populate it with ONLY the weekend days (SATURDAY and SUNDAY). Lastly, compare
-    //the two sets and retain in the first set only those days that are the same in both sets.
-
-    //2. Create a new hashMap of types <String,String> and populate it with elements containing an
-    //email (String) and a name (String). Next, create a new Set and populate it with the keys from
-    //the hashMap you created.
-
-    //3. Create a new class and call it SuperHero. Add fields for Id,Name and Age + getters and
-    //setters. Have the class implement the Comparable interface. Implement the override method
-    //and have it compare the AGE of the superhero. Next, create a new arrayList of type
-    //SuperHero. Sort the list by age and print out each element.
-
-    //4. Create an array of type int with numbers: {1,4,4,2,6,7}. Next, create an appropriate Collection
-    //and populate it with the content of the int array. Lastly, print out each element in the
-    //Collection without duplicates.
 
 }
