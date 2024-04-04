@@ -1,13 +1,12 @@
 package se.lexicon;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Challanges {
     public static void main(String[] args) {
         Challange1();
         Challange2();
+        Challange3();
     }
     //Challenges
     //1. Create an empty set and populate it with the all the days of the week. Next create a second
@@ -51,7 +50,25 @@ public class Challanges {
     //setters. Have the class implement the Comparable interface. Implement the override method
     //and have it compare the AGE of the superhero. Next, create a new arrayList of type
     //SuperHero. Sort the list by age and print out each element.
+    public static void Challange3(){
+       ArrayList<SuperHero> superheroesList = new ArrayList<>();
+       SuperHero superman = new SuperHero(1, "superman", 30);
+       superheroesList.add(0,superman);
+       SuperHero batman = new SuperHero(2,"batman", 41);
+       superheroesList.add(1,batman);
+       SuperHero wolverine = new SuperHero(3,"wolverine",35);
+       superheroesList.add(2,wolverine);
+       SuperHero hellboy = new SuperHero(4, "hellboy",50);
+       superheroesList.add(3,hellboy);
+        Collections.sort(superheroesList);
+       for (SuperHero superHero: superheroesList){
+           System.out.println("ID: " + superHero.getId());
+           System.out.println("Name: " + superHero.getName());
+           System.out.println("Age: " + superHero.getAge());
+           System.out.println();
 
+       }
+    }
     //4. Create an array of type int with numbers: {1,4,4,2,6,7}. Next, create an appropriate Collection
     //and populate it with the content of the int array. Lastly, print out each element in the
     //Collection without duplicates.
