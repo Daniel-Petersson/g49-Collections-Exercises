@@ -44,11 +44,12 @@ public class Car {
     public String getModel() {
         return model;
     }
+
     @Override
-    public String toString(){
-        return "Key{"+
-                // "Id: " +getId()+
-                "Brand: " + getBrand();
-                //", Model: " +getModel();
+    public String toString() {
+        return "Key{" +
+                "Id: " +getId()+
+                "Brand: " + getBrand()+
+                ", Model: " +getModel();
     }
 }

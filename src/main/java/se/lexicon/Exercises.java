@@ -166,7 +166,7 @@ public class Exercises {
         cars.put(2, "BMW");
         cars.put(3, "VW");
         cars.put(4, "Skoda");
-        System.out.println("HashMap of: " +cars);
+        System.out.println("HashMap of: " + cars);
     }
 
     //10. Create a new hashMap of type <Integer,String> and populate it with elements containing an
@@ -201,18 +201,20 @@ public class Exercises {
     //Create a new hashMap of type <Integer,Car> and populate it with elements containing an
     //id(Integer) and a car object(Car). Lastly, print out only the car's brand.
     public static void ex12() {
-        Car car1 = new Car(1,"Volvo","240");
-        Car car2 = new Car(2,"Ferrari","Testarosa");
-        Car car3 = new Car(3,"VW","Passat");
-        Car car4 = new Car(4,"Audi","80");
+        Car car1 = new Car(1, "Volvo", "240");
+        Car car2 = new Car(2, "Ferrari", "Testarosa");
+        Car car3 = new Car(3, "VW", "Passat");
+        Car car4 = new Car(4, "Audi", "80");
 
-        HashMap<Integer, Object> cars = new HashMap<>();
-        cars.put(1,car1);
-        cars.put(2,car2);
-        cars.put(3,car3);
-        cars.put(4,car4);
+        HashMap<Integer, Car> cars = new HashMap<>();
+        cars.put(1, car1);
+        cars.put(2, car2);
+        cars.put(3, car3);
+        cars.put(4, car4);
 
-        System.out.println(cars.toString());
+        for (Car car:cars.values()){
+            System.out.println(car.getBrand());
+        }
     }
 
 }

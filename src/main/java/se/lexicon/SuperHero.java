@@ -1,8 +1,8 @@
 package se.lexicon;
 
-public class SuperHero implements Comparable<SuperHero>{
+public class SuperHero implements Comparable<SuperHero> {
     //Add fields for Id,Name and Age + getters and
-    //    //setters. Have the class implement the Comparable interface
+    //setters. Have the class implement the Comparable interface
     //Fields
     private int id;
     private String name;
@@ -48,11 +48,11 @@ public class SuperHero implements Comparable<SuperHero>{
 
     @Override
     public int compareTo(SuperHero superHero) {
-        if (this.age==superHero.age){
+        if (this.age == superHero.age) {
             return 0;
         } else if (this.age > superHero.age) {
             return 1;
-        }else {
+        } else {
             return -1;
         }
     }
